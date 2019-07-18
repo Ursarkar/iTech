@@ -1,0 +1,31 @@
+table{
+    width:400;
+    height: 500;
+    background: rgb(241, 210, 106);
+    border-collapse: collapse;
+
+}
+
+td {
+    width:25%;
+    height:20%;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+.inbut{  
+    outline: none;
+    border-radius: 15px;
+    background:rgb(212, 179, 31);
+    color:rgb(75, 73, 73);
+    width:80px;
+    height:80px;
+    font-size: 30px;
+}
+
+.wind{
+    direction:RTL;
+    height: 80px;
+    width:260px;
+    font-size: 30px;
+}
