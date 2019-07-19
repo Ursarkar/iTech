@@ -1,5 +1,5 @@
 function numtarget(val){ 
-    document.getElementById("val").value+=val 
+    document.getElementById("val").value+=val   
 } 
 
 function ans() 
@@ -8,8 +8,8 @@ function ans()
     var b = eval(a)
     if (b==Infinity){
         document.getElementById("val").value = "Деление на 0"
-        setInterval("cl()", 2000)}
-    else{document.getElementById("val").value = b}  
+        setInterval("cl()", 3000)}
+    else{document.getElementById("val").value = b}
 } 
 
 function cl(){
@@ -24,18 +24,16 @@ function del(){
     document.getElementById("val").value = b
 }
 
-
-var sleep= 10;
-var sleep_time = 0; 
-setInterval("sleep_time++;", 1000); 
+var sleep=0;
+setInterval("sleep++;", 1000); 
 setInterval("updateChat()", 1000); 
 document.onmousemove = activeUser; 
 function activeUser() {
-    sleep_time = 0;
+    sleep=0;
 }
 function updateChat() {
-  if (sleep_time >= sleep) { 
-        document.getElementById("val").value="";
+  if (sleep>5) { 
+        cl();
         return;
   }
 

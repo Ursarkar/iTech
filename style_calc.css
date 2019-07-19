@@ -7,6 +7,7 @@ table{
 }
 
 td {
+    /*border:1px solid black;*/
     width:25%;
     height:20%;
     vertical-align: middle;
@@ -20,12 +21,14 @@ td {
     color:rgb(75, 73, 73);
     width:80px;
     height:80px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .wind{
     /*direction:RTL;*/
-    height: 80px;
-    width:260px;
+    background: rgb(211, 202, 122);
+    height:80px;
+    width:180px;
     font-size: 30px;
+    text-align: right;
 }

@@ -21,7 +21,8 @@
     <table align="center" cellpadding="5" >
         <tr>
             <td><input type="button"  value="Del" class="inbut" onclick="del()"></td>
-            <td colspan="3"><input type="text" name="win" class="wind" id="val"></td>     
+            <td><input type="button"  value="C" class="inbut" onclick="cl()"></td>
+            <td colspan="2"><input type="text" name="win" class="wind" id="val" maxlength="10" pattern="^[ 0-9]+$"></td>     
         </tr>
         <tr>
             <td><input type="button" name="one" value="1" class="inbut" onclick="numtarget('1')"></td>
@@ -44,7 +45,7 @@
         <tr>
             <td><input type="button"  value="0" class="inbut" onclick="numtarget('0')"></td>
             <td><input type="button"  value="=" class="inbut" onclick="ans()"></td>
-            <td><input type="button"  value="C" class="inbut" onclick="cl()"></td>
+            <td><input type="button"  value="." class="inbut" onclick="numtarget('.')"></td>
             <td><input type="button"  value="/" class="inbut" onclick="numtarget('/')"></td>
         </tr>
     </table>
