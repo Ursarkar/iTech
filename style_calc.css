@@ -24,7 +24,7 @@ td {
 }
 
 .wind{
-    direction:RTL;
+    /*direction:RTL;*/
     height: 80px;
     width:260px;
     font-size: 30px;
