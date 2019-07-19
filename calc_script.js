@@ -18,8 +18,9 @@ function cl(){
 
 function del(){
     var a=document.getElementById("val").value
-    var b = eval(a.slice(0,-1)) 
-    if (b==undefined){
+   // var b = eval(a.slice(0,-1)) 
+   var b = a.slice(0,-1)
+    if (b==undefined || b=='-'){
         b=""}
     document.getElementById("val").value = b
 }
@@ -32,7 +33,7 @@ function activeUser() {
     sleep=0;
 }
 function updateChat() {
-  if (sleep>5) { 
+  if (sleep>=10) { 
         cl();
         return;
   }
