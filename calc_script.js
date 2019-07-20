@@ -7,18 +7,9 @@ function ans()
     var a = document.getElementById("val").value;  
     var b = eval(a);
     if (b==Infinity){
-        document.getElementById("val").value = "Деление на 0";
-        setInterval("cl()", 3000);}
+        document.getElementById("val").value = "Деление на 0";}
     else{document.getElementById("val").value = b.toFixed(5)}
- /*   else{c=b.toString();
-        if (c[11]>=5){
-            c[10]=c[10]+1;
-            c=c.substring(0,11);
-        }
-        else{
-            c=c.substring(0,11);
-        }
-        document.getElementById("val").value=c;}*/
+
 } 
 
 function cl(){
@@ -34,16 +25,26 @@ function del(){
     document.getElementById("val").value = b;
 }
 
-var sleep=0;
-setInterval("sleep++;", 1000); 
-setInterval("updateChat()", 1000); 
-document.onmousemove = activeUser; 
-function activeUser() {
-    sleep=0;
-}
+var timeout = 15; //seconds
+var reset = 0;
+document.onclick = function() {
+    reset = 0;
+};
+document.onmousemove = function() {
+    reset = 0;
+};
+document.onkeypress = function() {
+    reset = 0;
+};
+window.setInterval(checktime, 1000);
 
-function updateChat() {
-  if (sleep>=10) { 
-        cl();
-  }
+function checktime() {
+    reset++;
+    var oPanel = document.getElementById("SecondsUntilExpire");
+    if (oPanel)
+        oPanel.innerHTML = (timeout - reset) + "";
+    if (reset >= timeout) {
+        alert("Не спи, замерзнешь!");
+    cl();
+    }
 }
